@@ -1,8 +1,14 @@
 {
   "name": "redux-commons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Easily create common reducers by just composing functions",
-  "main": "index.js",
+  "main": "ducks/index.js",
+  "jsnext:main": "src/index.js",
+  "files": [
+    "ducks",
+    "src",
+    "index.d.ts"
+  ],
   "typings": "./index.d.ts",
   "scripts": {
     "clean": "rimraf ducks",
