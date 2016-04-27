@@ -6,14 +6,14 @@ export const SCOPED = 'redux-commons/SCOPED';
  * @param {string} scopeName the name of the scope
  * @param {object} action the action to wrap
  */
-export function scoped(scopeName, action){
-    return {
+export function scoped(scopeName){
+    return action => ({
         type: SCOPED,
         payload: action,
         meta: {
             scope: scopeName
         }        
-    };
+    });
 }
 /**
  * This reducer enancher just allow to pass through the correct scoped actions
