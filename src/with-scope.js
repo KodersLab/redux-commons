@@ -6,13 +6,13 @@ export const SCOPED = 'redux-commons/SCOPED';
  * @param {string} scopeName the name of the scope
  * @param {object} action the action to wrap
  */
-export function scoped(scopeName){
-    return action => ({
+export function applyScope(scopeName){
+    return action => (...args) => ({
         type: SCOPED,
-        payload: action,
+        payload: action(...args),
         meta: {
             scope: scopeName
-        }        
+        }
     });
 }
 /**

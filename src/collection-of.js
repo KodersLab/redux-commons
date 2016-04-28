@@ -6,5 +6,5 @@ export default function (stripUndefinedItems = true){
     return reducer => 
         (state = [], action) => 
             state.map(item => reducer(item, action))
-                .filter(item => stripUndefinedItems && item == undefined);
+                .filter(item => stripUndefinedItems && item != undefined);
 }

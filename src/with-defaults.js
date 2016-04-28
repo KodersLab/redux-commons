@@ -6,7 +6,7 @@ const NOOP = () => ({});
  */
 export default function (defaultsFn = NOOP){
     return reducer => 
-        (state = {}, action) =>
+        (state, action) =>
             reducer(
                 state ? Object.assign({}, defaultsFn(state), state) : state,
                 action
