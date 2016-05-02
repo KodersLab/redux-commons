@@ -8,7 +8,7 @@ export default function (stripUndefinedItems = true){
             var newState = {};
             Object.keys(state).forEach(key => {
                 var value = reducer(state[key], action);
-                if(!(stripUndefinedItems && value != undefined) || !stripUndefinedItems){
+                if((stripUndefinedItems && value != undefined) || !stripUndefinedItems){
                     newState[key] = value;
                 }
             });

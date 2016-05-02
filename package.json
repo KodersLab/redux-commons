@@ -1,6 +1,6 @@
 {
   "name": "redux-commons",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easily create common reducers by just composing functions",
   "main": "ducks/index.js",
   "jsnext:main": "src/index.js",
