@@ -1,21 +1,21 @@
 {
   "name": "redux-commons",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Easily create common reducers by just composing functions",
-  "main": "ducks/index.js",
+  "main": "lib/index.js",
   "jsnext:main": "src/index.js",
   "files": [
-    "ducks",
+    "lib",
     "src",
     "index.d.ts"
   ],
   "typings": "./index.d.ts",
   "scripts": {
-    "clean": "rimraf ducks",
-    "build:ducks": "cross-env BABEL_ENV=commonjs babel src --out-dir ducks",
-    "build": "npm run build:ducks",
+    "clean": "rimraf lib",
+    "build:lib": "cross-env BABEL_ENV=commonjs babel src --out-dir lib",
+    "build": "npm run build:lib",
     "prepublish": "npm run clean && npm run build && npm run test",
-    "test": "node ducks/__test__/index.js"
+    "test": "node lib/__test__/index.js"
   },
   "repository": {
     "type": "git",
